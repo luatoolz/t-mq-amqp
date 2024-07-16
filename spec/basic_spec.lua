@@ -1,0 +1,5 @@
+describe("ok", function()
+  it("success", function()
+    assert.is_true(true)
+  end)
+end)
