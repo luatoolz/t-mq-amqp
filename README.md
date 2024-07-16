@@ -7,7 +7,7 @@ local amqp = t.mq.amqp
 ## depends luarocks
 - `t`
 - `amqp-client-rpc`
-- `cqueues`
+- `luasocket`
 
 ## test depends
 - `busted`

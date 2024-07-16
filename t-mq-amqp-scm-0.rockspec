@@ -20,7 +20,7 @@ t.mq.amqp: message queue object interface
 dependencies = {
   "lua >= 5.1",
   "t",
-  "cqueues",
+  "luasocket",
 }
 
 test_dependencies = {
