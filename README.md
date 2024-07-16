@@ -4,12 +4,21 @@ local t = require "t"
 local amqp = t.mq.amqp
 ```
 
-## depends luarocks
+# depends
+## luarocks
 - `t`
 - `amqp-client-rpc`
-- `luasocket`
+- `cqueues`
 
-## test depends
+## alpine
+- `openssl`
+- `openssl-dev`
+
+## debian
+- `libssl3`
+- `libssl-dev`
+
+## test
 - `busted`
 - `luacheck`
 - `lua-resty-uuid`

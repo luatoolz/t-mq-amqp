@@ -8,6 +8,7 @@ RUN apk update && apk upgrade
 RUN apk add --no-cache \
   ca-certificates curl \
   build-base gcc git make cmake \
+  openssl openssl-dev \
 	luajit lua-dev lua${LUA_VERSION} \
 	luarocks
 
