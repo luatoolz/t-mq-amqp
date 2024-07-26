@@ -13,10 +13,13 @@ local amqp = t.mq.amqp
 ## alpine
 - `openssl`
 - `openssl-dev`
+- `bsd-compat-headers`
+- `m4`
 
 ## debian
 - `libssl3`
 - `libssl-dev`
+- `m4`
 
 ## test
 - `busted`
