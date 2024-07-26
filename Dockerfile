@@ -8,7 +8,7 @@ RUN apk update && apk upgrade
 RUN apk add --no-cache \
   ca-certificates curl \
   build-base gcc git make cmake \
-  openssl openssl-dev \
+  openssl openssl-dev bsd-compat-headers m4 \
 	luajit lua-dev lua${LUA_VERSION} \
 	luarocks
 
@@ -17,6 +17,8 @@ RUN luarocks config lua_dir /usr
 
 FROM builder AS soft
 RUN luarocks install --dev t-mq-amqp
+
+RUN apk del build-base gcc git make cmake openssl-dev bsd-compat-headers m4 && rm -rf /var/cache
 
 FROM scratch
 COPY --from=soft / /
